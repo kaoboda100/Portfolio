@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #f1f1f1;
+    padding: 0 10%;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #b74b4b;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #aaa;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 0.5rem;
+    color: #b74b4b;
+    font-size: 2rem;
+    transition: color 0.3s;
+}
+.footer-social-icons a {
+    display: inline-block;
+    margin: 0 0.5rem;
+    color: #b74b4b;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover,
+.footer-social-icons a:hover {
+    color: #f1f1f1;
+}
+
+.about {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    color: #b74b4b;
+    margin-bottom: 1rem;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-image {
+    width: 80%;
+    max-width: 640px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border: 2px solid #b74b4b;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.1);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Khung video */
+.video-frame {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #b74b4b;
+    border-radius: 10px;
+    aspect-ratio: 9 / 16; /* Đặt tỷ lệ 9:16 */
+    transition: transform 0.5s ease;
+}
+
+.video-frame:hover {
+    transform: scale(1.05);
+}
+
+.video-frame video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.video-frame:hover video {
+    transform: scale(1.05);
+}
+.portfolio-videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.portfolio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Ngăn chặn tương tác khi ẩn */
+}
+
+.video-frame:hover .overlay {
+    opacity: 1; /* Hiện overlay khi hover */
+    pointer-events: auto; /* Cho phép tương tác khi hover */
+    cursor: pointer; /* Đổi con trỏ thành hình tay khi hover */
+}
+
+.overlay h1 {
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    user-select: none;
+}
+
+.experience, .education {
+    margin-top: 4rem;
+    text-align: center;
+    animation: floating 3s ease-in-out infinite;
+}
+
+.experience-item, .education-item {
+    background-color: #1e1e1e;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.experience-item:hover, .education-item:hover {
+    transform: scale(1.05);
+}
+
+.experience-item h3, .education-item h3 {
+    font-size: 1.8rem;
+    color: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0 5%;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+.experience h2, .education h2{
+    font-size: 2.5rem;
+    color: #b74b4b;
+    margin-bottom: 1rem;
+}
+.edu2 span {
+    color: #b74b4b;
+    font-size: 1.2rem
+}
+.education-item span {
+    color: #b74b4b;
+}
+.contact-info, footer {
+    text-align: center;
+    margin-top: 1rem;
+    color: #f1f1f1;
+}
+
+.contact-info p,
+footer p {
+    font-size: 1rem;
+    margin: 0.2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-info i {
+    color: #b74b4b;
+    margin-right: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.experience-item2 a {
+    display: flex;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.experience-item2 a:hover {
+    transform: scale(1.1);
+}
+
+.hover-effect {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.hover-effect:hover {
+    color: #FF0000;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+.highlight {
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.highlight:hover {
+    transform: scale(1.1);
+}
+
+.about-content h3 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.profile-image-slider {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border: 2px solid #b74b4b;
+    border-radius: 10px;
+}
+
+.profile-image-slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.profile-image-slider img.active {
+    opacity: 1;
+}
+.experience-item2 a {
+    display: flex; /* Sử dụng flexbox để căn chỉnh biểu tượng và văn bản */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    color: inherit; /* Giữ màu sắc ban đầu */
+    text-decoration: none; /* Bỏ gạch chân dưới */
+    padding: 5px 0; /* Thêm khoảng cách giữa các thẻ */
+    padding-left: 10px; /* Dịch sang bên phải */
+    font-size: 18px; /* Tăng kích thước chữ */
+    font-weight: bold; /* Đặt chữ thành đậm */
+    transition: transform 0.3s; /* Thêm hiệu ứng chuyển động mượt */
+}
+
+.experience-item2 a i {
+    margin-right: 8px; /* Khoảng cách giữa biểu tượng và văn bản */
+    font-size: 20px; /* Kích thước biểu tượng */
+    color: #b74b4b; /* Màu đỏ cho logo YouTube */
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%; /* Chiếm toàn bộ chiều cao */
+    background-color: rgba(0, 0, 0, 0.7); /* Màu đen trong suốt */
+    display: flex; /* Sử dụng flex để căn giữa */
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Mặc định ẩn */
+    transition: opacity 0.3s ease; /* Hiệu ứng chuyển đổi */
+    pointer-events: none; /* Ngăn chặn tương tác với overlay */
+}
+
+.video-frame:hover .overlay {
+    opacity: 1; /* Hiện overlay khi hover */
+    pointer-events: auto; /* Cho phép tương tác khi hover */
+}
+.video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Màu tối với độ trong suốt */
+    display: none; /* Ẩn mặc định */
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Đặt trên tất cả các phần tử khác */
+}
+
+.video-container {
+    position: relative;
+    width: 80%; /* Giảm kích thước xuống 80% để nhỏ hơn 20% */
+    max-width: 480px; /* Kích thước tối đa giảm xuống 480px */
+    margin: auto; /* Căn giữa */
+    border-radius: 15px; /* Thêm border radius */
+    overflow: hidden; /* Đảm bảo không có phần nào của video ra ngoài border-radius */
+}
+
+.video-container video {
+    width: 100%; /* Chiếm toàn bộ chiều rộng khung */
+    height: auto; /* Chiều cao tự động */
+    border-radius: 15px; /* Thêm border radius cho video */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #1e1e1e; /* Màu nền */
+    padding: 1.5rem 0; /* Khoảng cách trên và dưới */
+    text-align: center; /* Căn giữa nội dung */
+    color: #aaa; /* Màu chữ */
+    margin-top: 4rem; /* Khoảng cách trên từ nội dung trước */
+}
+
+footer p {
+    margin: 0.5rem 0; /* Khoảng cách giữa các đoạn văn */
+    font-size: 0.9rem; /* Kích thước chữ */
+}
+
